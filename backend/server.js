@@ -11,6 +11,14 @@ connectDB();
 
 app.use(express.json()); 
 
+app.use(
+  cors({
+    origin: "*",
+  })
+);
+
+
+
 // ..................................................sample.....................................................
 app.get("/", (req, res) => {
   res.json({ msg: "Hello Sudhagar!" });
